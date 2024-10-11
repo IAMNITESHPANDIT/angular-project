@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -9,5 +9,16 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'p';
+  title = 'Nitesh';
+  
+  constructor(){}
+
+  changeTitle(str:string):void{
+    this.title = str;
+  }
+
+  // ngOnInit(): void {
+  // }
+
+  
 }
