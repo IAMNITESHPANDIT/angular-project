@@ -9,16 +9,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Nitesh';
   
-  constructor(){}
-
-  changeTitle(str:string):void{
-    this.title = str;
-  }
-
-  // ngOnInit(): void {
-  // }
 
   
 }
