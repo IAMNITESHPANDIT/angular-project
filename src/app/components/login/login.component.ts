@@ -37,7 +37,8 @@ export class LoginComponent {
         this.response = await this.apiService.post('/auth/login',{email,password});
         this.toastService.showSuccess(this.response?.message);
         console.log(this.response);
-      } catch (error) {
+      } catch (error:any) {
+        this.toastService.showError(error.error);
         console.error('Error fetching data: ', error);
       }
     }

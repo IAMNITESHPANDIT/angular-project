@@ -18,9 +18,9 @@ export class ApiService {
     try {
       const response: AxiosResponse<T> = await axios.get(`${this.baseUrl}${endpoint}`, config);
       return response.data;
-    } catch (error) {
+    } catch (error:any) {
       this.handleError(error);
-      throw error;
+      throw error.response.data;
     }
   }
 
@@ -28,9 +28,9 @@ export class ApiService {
     try {
       const response: AxiosResponse<T> = await axios.post(`${this.baseUrl}${endpoint}`, data, config);
       return response.data;
-    } catch (error) {
+    } catch (error:any) {
       this.handleError(error);
-      throw error;
+      throw error.response.data;
     }
   }
 
@@ -38,9 +38,9 @@ export class ApiService {
     try {
       const response: AxiosResponse<T> = await axios.put(`${this.baseUrl}${endpoint}`, data, config);
       return response.data;
-    } catch (error) {
+    } catch (error:any) {
       this.handleError(error);
-      throw error;
+       throw error.response.data;
     }
   }
 
@@ -48,9 +48,9 @@ export class ApiService {
     try {
       const response: AxiosResponse<T> = await axios.delete(`${this.baseUrl}${endpoint}`, config);
       return response.data;
-    } catch (error) {
+    } catch (error:any) {
       this.handleError(error);
-      throw error;
+       throw error.response.data;
     }
   }
 
