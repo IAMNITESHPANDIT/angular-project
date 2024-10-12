@@ -1,3 +1,42 @@
-<div>Header</div>
-<router-outlet />
-<div>Footer</div>
+<div class="container">
+  <p-toast [breakpoints]="{ '920px': { width: '100%', right: '0', left: '0' } }" />
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container">
+      <a class="navbar-brand" >
+        <img src="assests/images/logo.png" alt="Logo" width="40" height="40"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" >Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" >Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" >Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <router-outlet />
+  <footer class="py-3 my-4 container">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+    </ul>
+    <p class="text-center text-body-secondary">© {{currentYear}} Company, Inc</p>
+  </footer> 
+</div>
+
+

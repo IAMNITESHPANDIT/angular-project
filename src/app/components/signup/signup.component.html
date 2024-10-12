@@ -1,0 +1,65 @@
+<div class="signup-container">
+
+    <form class="form" [formGroup]="form" >
+  
+      <div class="form-group">
+        <app-input-field
+          label="Name"
+          placeholder="Enter Name"
+          type="Name"
+          [control]="form.get('Name')"
+          [errorMessages]="{
+            required: 'Name is required',
+            Name: 'Please enter a valid Name'
+          }"
+        >
+        </app-input-field>
+        <app-input-field
+          label="Email"
+          placeholder="Enter Email"
+          type="Email"
+          [control]="form.get('Email')"
+          [errorMessages]="{
+            required: 'Email is required',
+            Email: 'Please enter a valid Email'
+          }"
+        >
+        </app-input-field>
+
+        <app-input-field
+          label="Phone"
+          placeholder="Enter Phone"
+          type="Phone"
+          [control]="form.get('Phone')"
+          [errorMessages]="{
+            required: 'Phone is required',
+            Phone: 'Please enter a valid Phone'
+          }"
+        >
+        </app-input-field>
+  
+        <app-input-field
+          label="Password"
+          placeholder="password"
+          type="password"
+          [control]="form.get('password')"
+          [errorMessages]="{
+            required: 'Password is required',
+            minlength: 'Password must be at least 6 characters long'
+          }"
+        >
+        </app-input-field>
+      </div>
+      <div class="login-btn-container">
+          <app-button
+          [label]="'Submit'"
+          [type]="'submit'"
+          [className]="'btn btn-success mt-2 mb-2'"
+          (click)="onRegister(form.value)"
+        >
+        </app-button>
+      </div>
+     
+    </form>
+  </div>
+  

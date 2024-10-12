@@ -1,0 +1,16 @@
+<div class="input-field-container">
+  <div class="form-group">
+    <label *ngIf="label" for="{{ name }}">{{ label }}</label>
+    <input
+      [formControl]="control"
+      [attr.placeholder]="placeholder"
+      [attr.type]="type"
+      [ngClass]="inputClasses"
+      [attr.id]="name"
+    />
+    <div *ngIf="hasError" class="error-message">
+      {{ errorMessage }}
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,41 @@
+<div class="login-container">
+
+  <form class="form" [formGroup]="form" >
+
+    <div class="form-group">
+      <app-input-field
+        label="Email"
+        placeholder="Enter email"
+        type="email"
+        [control]="form.get('email')"
+        [errorMessages]="{
+          required: 'Email is required',
+          email: 'Please enter a valid email address'
+        }"
+      >
+      </app-input-field>
+
+      <app-input-field
+        label="Password"
+        placeholder="password"
+        type="password"
+        [control]="form.get('password')"
+        [errorMessages]="{
+          required: 'Password is required',
+          minlength: 'Password must be at least 6 characters long'
+        }"
+      >
+      </app-input-field>
+    </div>
+    <div class="login-btn-container">
+        <app-button
+        [label]="'Submit'"
+        [type]="'submit'"
+        [className]="'btn btn-success mt-2 mb-2'"
+        (click)="onSubmit(form.value)"
+      >
+      </app-button>
+    </div>
+   
+  </form>
+</div>
