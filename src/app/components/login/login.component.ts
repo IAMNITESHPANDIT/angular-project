@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { InputFieldComponent } from '../shared/input/input.component';
 import { CommonModule } from '@angular/common';
 import { ApiService } from '../../service/api.service';
-import { ToastService } from '../../toast/toast.service';
+import { ToastService } from '../../utils/toast/toast.service';
 
 @Component({
   selector: 'app-login',

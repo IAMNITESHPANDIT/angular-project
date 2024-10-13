@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgOptimizedImage } from '@angular/common'
 import { ToastModule } from 'primeng/toast';
-import { ToastService } from './toast/toast.service';
+import { ToastService } from './utils/toast/toast.service';
 import { MessageService } from 'primeng/api';
 @Component({
   selector: 'app-root',
